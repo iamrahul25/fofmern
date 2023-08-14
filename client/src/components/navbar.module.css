@@ -1,70 +1,70 @@
 .navbar {
-    background-color: #1A2C46;
-    height: 80px;
-    width: 100%;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 4px;
+    font-size: 18px;
 }
 
-.navbar ul li a {
-    list-style-type: none;
+.navbar_logo {
+    font-size: 24px;
+    text-shadow: 0 0 1vw #fa1e16b1, 0 0 3vw #fa1e168f, 0 0 10vw #fa1e16a0, 0 0 10vw #fa1e16a1, 0 0 .4vw #FED128, 4px 4px 2px #806914;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
 }
 
-.label {
-    color: white;
-    font-size: 35px;
-    padding: 0 30px;
-    line-height: 80px;
-    font-weight: bold;
-}
-
 .navbar ul {
-    float: right;
-    margin-right: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
-.navbar ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 10px;
-}
-
-.click:checked~ul {
-    left: 0%;
-}
-
-.navbar ul li a {
+.navbar li {
+    margin-right: 10px;
+    position: relative;
     color: white;
 }
 
-.menu {
-    float: right;
-    display: none;
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
 }
 
-.click {
-    display: none;
+.navbar a:hover {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, 4px 4px 2px #806914;
+    color: #ffda54;
 }
 
-@media (max-width: 800px) {
-    .navbar ul {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        background-color: black;
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
+.navbar li:hover .navbar_link_name {
+    display: block;
+}
 
-    .navbar ul li {
-        line-height: 50px;
-    }
+.navbar_link_name {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 16px;
+    transform: translateX(-50%);
+    background-color: #333333cc;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    z-index: 1;
+}
 
-    .menu {
-        display: block;
-        color: white;
-    }
+.navbar li:hover .navbar_link_name::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: #333333cc;
 }

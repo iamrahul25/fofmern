@@ -1,7 +1,7 @@
 /* Friends Card */
 .friend_card{
-    height: 160px;
-    width: 120px;
+    height: 180px;
+    width: 130px;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
     background-color: white;
     
@@ -14,19 +14,19 @@
 }
 
 .card_img{
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .card_fullname{
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .card_insta{
-    font-size: 10px;
+    font-size: 11px;
     text-decoration: none;
 }
 
